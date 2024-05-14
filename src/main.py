@@ -1,10 +1,9 @@
 import json
-from utils import filtered_and_sorted, get_data_correct_format
+from utils import filtered_and_sorted, get_data_correct_format, read_file
 
 
 def main():
-    with open("/home/mefanya/PycharmProjects/account-transactions/data/operations.json", "r", encoding="utf-8") as file:
-        data = json.load(file)
+    data = read_file()
 
     print("Сколько последних операций хотите получить?")
     user_input = int(input("Введите число: "))

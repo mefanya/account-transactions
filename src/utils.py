@@ -1,4 +1,12 @@
 from typing import Any
+import json
+
+
+def read_file():
+    with open("../data/operations.json", "r", encoding="utf-8") as file:
+        data = json.load(file)
+
+    return data
 
 
 def filtered_and_sorted(data: list) -> list[dict]:

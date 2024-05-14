@@ -1,9 +1,7 @@
-from src.utils import filtered_and_sorted, formated_date, mask_account, mask_curd_number, mask_from_to, get_data_correct_format
-import json
+from src.utils import filtered_and_sorted, formated_date, mask_account, mask_curd_number, mask_from_to, get_data_correct_format, read_file
 
 
-with open("/home/mefanya/PycharmProjects/account-transactions/data/operations.json", "r", encoding="utf-8") as file:
-    data = json.load(file)
+data = read_file()
 
 
 def test_filtered_and_sorted_executed():
